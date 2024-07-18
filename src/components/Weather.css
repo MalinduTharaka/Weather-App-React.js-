@@ -6,15 +6,17 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    padding: 5%;
+    box-sizing: border-box;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
-    gap: 5px; /* Reduced gap to align items closer together */
-    width: 100%; /* Ensure it takes full width of parent */
-    justify-content: flex-start; /* Align items to the left */
-    padding: 0 0; /* Add some padding if needed */
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
 }
 
 .search-bar input {
@@ -25,56 +27,83 @@
     padding-left: 25px;
     color: #626262;
     background: #ebfffc;
-    font-size: 18px;
-    flex-grow: 5; /* Allow input to take available space */
-    max-width: 400px; /* Ensure max width */
+    font-size: 1.1em;
+    flex-grow: 5;
+    max-width: 400px;
+    width: 70%;
 }
 
 .search-bar img {
     width: 50px;
-    padding: 15px;
+    padding: 10px;
     border-radius: 25%;
     background: #ebfffc;
     cursor: pointer;
 }
 
 .weather-icon {
-    width: 180px;
-    margin: 80px 0;
+    width: 25vw;
+    max-width: 180px;
+    margin: 5vw 0;
 }
 
 .temp {
     color: #fff;
-    font-size: 80px;
+    font-size: 8vw;
     line-height: 1;
 }
 
 .location {
     color: #fff;
-    font-size: 40px;
+    font-size: 5vw;
 }
 
 .weather-data {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 5vw;
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 .weather-data .col {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    font-size: 22px;
+    font-size: 4vw;
 }
 
 .weather-data .col span {
     display: block;
-    font-size: 16px;
+    font-size: 2.5vw;
 }
 
 .weather-data .col img {
-    width: 26px;
+    width: 6vw;
     margin-top: 10px;
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+    .search-bar {
+        justify-content: flex-start;
+    }
+
+    .weather-data {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .weather-data .col {
+        font-size: 1.5em;
+    }
+
+    .weather-data .col span {
+        font-size: 1em;
+    }
+
+    .weather-data .col img {
+        width: 26px;
+    }
 }
